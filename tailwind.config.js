@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      minHeight: {
+        '90v': '90vh',
+      },
       fontFamily: {
         generalsans: ['General Sans', 'sans-serif'],
       },

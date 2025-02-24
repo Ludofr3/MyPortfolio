@@ -10,14 +10,14 @@ import Experience from "./sections/Experience.jsx";
 
 const App = () => {
   return (
-    <main className="max-w-7xl mx-auto">
+    <main>
       <Navbar />
       <Hero />
-      <About />
-      <Projects />
-      <Clients />
-      <Experience />
-      <Contact />
+      {/* <About />
+      <Projects /> */}
+      {/* <Clients /> */}
+      {/* <Experience />
+      <Contact /> */}
       <Footer />
     </main>
   );

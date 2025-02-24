@@ -1,7 +1,7 @@
 import Globe from "react-globe.gl"
 import { useState } from "react"
 import Button from "../components/Button"
-
+import Section from "../components/Section"
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -15,7 +15,25 @@ const About = () => {
   return (
     <section className="c-space my-20" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
+        {/* <Section
+          title="À propos"
+          content="Étudiant en 4ème année, passionné par les systèmes et logiciels."
+        />
+        <Section
+          title="Projets"
+          content={
+            <ul>
+              <li>Task Manager - React Native, Docker</li>
+              <li>Script d’automatisation - Bash, Python</li>
+            </ul>
+          }
+        />
+        <Section
+          title="Compétences"
+          content="C/C++, Rust, Python, React Native, Docker"
+        /> */}
         <div className="col-span-1 xl:row-span-3">
+
           <div className="grid-container">
             <img src="/assets/grid1.png" alt="grid-1" className="w-full sm:h-[276px] h-fit object-contain" />
             <div>
