@@ -1,4 +1,5 @@
-import { PerspectiveCamera } from "@react-three/drei"
+import React, { useState } from 'react'
+import { PerspectiveCamera, Html } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import { Suspense } from "react"
 // import { Leva, useControls } from "leva"
@@ -13,6 +14,7 @@ import Rings from "../components/Ring"
 import HeroCamera from "../components/HeroCamera"
 import Button from "../components/Button"
 import { OldComputers } from "../components/OldComputers"
+import { navLinks } from '../constants';
 
 const Hero = () => {
   // const x = useControls(
@@ -59,6 +61,9 @@ const Hero = () => {
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
+  const [showText, setShowText] = useState(0);
+  const selectedLink = navLinks.find(link => link.id === showText);
+
   return (
     <section id="home" className="min-h-90v w-full flex flex-col relative">
       <div className="w-full mx-auto flex flex-col mt-20 c-space gap-3">
@@ -75,8 +80,9 @@ const Hero = () => {
             <HeroCamera isMobile={isMobile}>
               <OldComputers
                 position={sizes.deskPosition}
-                //rotation={[0, -Math.PI, 0]}
+                // rotation={[0, -Math.PI, 0]}
                 scale={sizes.deskScale}
+              // setShowText={setShowText}
               />
               {/* <HackerRoom
                 position={sizes.deskPosition}
