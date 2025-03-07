@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { navLinks } from '../constants/index.js';
 
-const NavItems = () => {
+const NavItems = ({ setCurrentSection }) => {
     return (
         <ul className="nav-ul">
             {navLinks.map(({ id, href, name }) => (
                 <li key={id} className="nav-li">
                     <a href={href} className="nav-li_a"
-                        onClick={() => { }}>
+                        onClick={() => { setCurrentSection(href) }}>
                         {name}
                     </a>
                 </li>
@@ -16,7 +16,7 @@ const NavItems = () => {
     )
 }
 
-const Navbar = () => {
+const Navbar = ({ setCurrentSection }) => {
     const [isOpen, setISOpen] = useState(false);
 
     const tooglMenu = () => setISOpen((prevIsOpen) => !prevIsOpen);
@@ -36,13 +36,13 @@ const Navbar = () => {
                             className="w-6 h-6" />
                     </button>
                     <nav className="sm:flex hidden">
-                        <NavItems />
+                        <NavItems setCurrentSection={setCurrentSection} />
                     </nav>
                 </div>
             </div>
             <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
                 <nav className="p-5">
-                    <NavItems />
+                    <NavItems setCurrentSection={setCurrentSection} />
                 </nav>
             </div>
         </header>

@@ -8,9 +8,10 @@ import TextOverlay from './TextOverlay';
 import { navLinks } from '../constants';
 
 export function OldComputers(props) {
-  const { nodes, materials } = useGLTF('/models/OldComputers.glb')
+  // const { nodes, materials } = useGLTF('/models/OldComputers2.glb')
   const screenTxt = useTexture('textures/desk/screen.png');
-
+  const nodes = props.nodes;
+  const materials = props.materials;
   // const setShowText = props.setShowText;
   const [showText, setShowText] = useState(0);
   return (
@@ -877,10 +878,11 @@ export function OldComputers(props) {
           receiveShadow
           geometry={nodes.Cube009_1.geometry}
           material={materials.Screen}
-          onPointerEnter={() => setShowText(1)}
-          onPointerLeave={() => setShowText(0)}
+        // onPointerEnter={() => setShowText(1)}
+        // onPointerLeave={() => setShowText(0)}
+        // onClick={() => props.onScreenClick(navLinks[0])}
         >
-          <meshMatcapMaterial map={screenTxt} />
+          {/* <meshMatcapMaterial map={screenTxt} /> */}
         </mesh>
       </group>
       <group position={[-1.43, 2.496, -1.8]} rotation={[0, 1.002, 0]}>
@@ -897,6 +899,7 @@ export function OldComputers(props) {
           material={materials.Screen}
           onPointerEnter={() => setShowText(2)}
           onPointerLeave={() => setShowText(0)}
+          onClick={() => props.onScreenClick(navLinks[1])}
         >
           <meshMatcapMaterial map={screenTxt} />
         </mesh>
@@ -915,6 +918,7 @@ export function OldComputers(props) {
           material={materials.Screen}
           onPointerEnter={() => setShowText(3)}
           onPointerLeave={() => setShowText(0)}
+          onClick={() => props.onScreenClick(navLinks[2])}
         >
           <meshMatcapMaterial map={screenTxt} />
         </mesh>
@@ -951,6 +955,7 @@ export function OldComputers(props) {
           material={materials.Screen}
           onPointerEnter={() => setShowText(4)}
           onPointerLeave={() => setShowText(0)}
+          onClick={() => props.onScreenClick(navLinks[3])}
         >
           <meshMatcapMaterial map={screenTxt} />
         </mesh>

@@ -7,17 +7,21 @@ import Clients from "./sections/Clients.jsx";
 import Contact from "./sections/Contact.jsx"
 import Footer from "./sections/Footer.jsx"
 import Experience from "./sections/Experience.jsx";
+import { useState } from "react";
 
 const App = () => {
+  const [currentSection, setCurrentSection] = useState('#home');
   return (
     <main>
-      <Navbar />
-      <Hero />
-      {/* <About />
-      <Projects /> */}
-      {/* <Clients /> */}
-      {/* <Experience />
-      <Contact /> */}
+      <Navbar setCurrentSection={setCurrentSection} />
+      {currentSection === '#home' && <Hero setCurrentSection={setCurrentSection} />}
+      <div className="max-w-7xl mx-auto">
+        {currentSection === '#About' && <About setCurrentSection={setCurrentSection} />}
+        {currentSection === '#Work' && <Projects setCurrentSection={setCurrentSection} />}
+        {currentSection === '#Work' && <Clients setCurrentSection={setCurrentSection} />}
+        {currentSection === '#Work' && <Experience setCurrentSection={setCurrentSection} />}
+        {currentSection === '#Contact' && <Contact setCurrentSection={setCurrentSection} />}
+      </div>
       <Footer />
     </main>
   );
