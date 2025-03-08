@@ -28,11 +28,6 @@ const CameraManager = ({ activeSpline, setCurrentSection, nodes }) => {
       const targetObject = nodes[targetName];
 
       if (splineObject && targetObject) {
-        console.log(`Spline sélectionnée : ${splineName}`);
-        console.log(`Localisation: ${splineObject}`);
-        console.log(`Objet cible : ${targetName}`);
-        console.log(`Localisation: ${targetObject}`);
-
         // Extraire les points de la spline (mesh)
         const points = splineObject.geometry.attributes.position.array;
         const controlPoints = [];
@@ -42,9 +37,13 @@ const CameraManager = ({ activeSpline, setCurrentSection, nodes }) => {
           const globalPoint = localPoint.applyMatrix4(splineObject.matrixWorld);
           controlPoints.push(globalPoint);
         }
-        controlPoints.forEach((point, index) => {
-          console.log(`Point ${index}: ${point.x}, ${point.y}, ${point.z}`);
-        });
+        if (activeSpline == "Work") {
+          console.log("REVERSE");
+          controlPoints.reverse();
+        }
+        // controlPoints.forEach((point, index) => {
+        //   console.log(`Point ${index}: ${point.x}, ${point.y}, ${point.z}`);
+        // });
         // Créer une courbe CatmullRom pour un mouvement lisse
         const bezierCurve = new THREE.CatmullRomCurve3(controlPoints);
         setProgress(0);
@@ -66,18 +65,31 @@ const CameraManager = ({ activeSpline, setCurrentSection, nodes }) => {
 
       // Position de la caméra le long de la courbe
       const position = curve.getPointAt(newProgress);
-      const offset = new THREE.Vector3(0, -1, 0);
+      const offset = new THREE.Vector3(0, 0, 0);
+      if (activeSpline == "Work") {
+        offset.y = -1.8;
+        offset.x = -0.8;
+        offset.z = -0.1;
+      } else if (activeSpline == "About") {
+        offset.x = -0.3;
+        offset.z = -0.6;
+        offset.y = -0.7;
+      } else if (activeSpline == "Contact") {
+        offset.x = 1.3;
+        offset.y = -0.55;
+        // offset.z = 0;
+      }
       cameraRef.current.position.copy(position).add(offset);
-      // console.log(`Progress: ${newProgress}, Position: ${position.x}, ${position.y}, ${position.z}`);
 
       // Faire regarder la caméra vers l'objet cible
       cameraRef.current.lookAt(targetObject.position);
-      console.log("target object position: ", targetObject.position);
 
       // Fin de l'animation
       if (newProgress >= 1) {
         camera.position.copy(curve.getPointAt(0)); // Position à progress = 0 (départ)
         camera.position.copy(curve.getPointAt(1)); // Position à progress = 1 (arrivée)
+        console.log(curve.getPointAt(0));
+        console.log(curve.getPointAt(1));
         setIsAnimating(false);
         setCurrentSection(`#${activeSpline}`);
         setCurve(null);

@@ -16,18 +16,10 @@ export function OldComputers2(props) {
   return (
     <group {...props} dispose={null}>
       <group name="Scene">
-        {/* <mesh
-          name="Plane"
-          castShadow
-          receiveShadow
-          geometry={nodes.Plane.geometry}
-          material={materials['Material.001']}
-          scale={13}
-        /> */}
-        <group name="Contact" position={[5.029, 0.791, -1.762]} />
+        <group name="Contact" position={[4.507, 0.791, -1.357]} />
         <group name="Error1" position={[-3.417, 3.586, 1.303]} />
-        <group name="About" position={[-3.084, 2.09, -2.811]} />
-        <group name="Work" position={[-4.274, -0.053, -1.347]} />
+        <group name="About" position={[-3.096, 1.094, -3.081]} />
+        <group name="Work" position={[-7.08, -2.528, -2.719]} />
         <mesh
           name="PC_01001"
           castShadow
