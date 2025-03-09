@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { navLinks } from '../constants/index.js';
+import { color } from 'three/tsl';
 
 const NavItems = ({ setCurrentSection }) => {
     return (
@@ -7,7 +8,7 @@ const NavItems = ({ setCurrentSection }) => {
             {navLinks.map(({ id, href, name }) => (
                 <li key={id} className="nav-li">
                     <a href={href} className="nav-li_a"
-                        onClick={() => { setCurrentSection(href) }}>
+                        onClick={() => { setCurrentSection(href) }} style={{ color: 'rgb(255, 133, 27)' }}>
                         {name}
                     </a>
                 </li>
@@ -26,7 +27,7 @@ const Navbar = ({ setCurrentSection }) => {
                 <div className="flex items-center justify-between items-center py-5 mx-auto c-space">
                     <a href="/"
                         className="text-neutral-400 font-blod text-xl hover:text-white transition-colors">
-                        Ludovic
+                        <img src="public/assets/Logo.png" alt="Logo" style={{ height: '40px' }} />
                     </a>
                     <button onClick={tooglMenu}
                         className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
