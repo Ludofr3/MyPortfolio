@@ -10,10 +10,7 @@ import CameraManager from '../components/CameraManager';
 import PropTypes from 'prop-types';
 import { useGLTF } from '@react-three/drei';
 
-const Hero = ({ setCurrentSection }) => {
-  const isSmall = useMediaQuery({ maxWidth: 440 });
-  const isMobile = useMediaQuery({ maxWidth: 768 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
+const Hero = ({ setCurrentSection, isSmall, isMobile, isTablet }) => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   const { nodes, materials } = useGLTF('/models/OldComputers2.4.glb');

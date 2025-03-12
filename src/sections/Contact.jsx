@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
-const Contact = () => {
+const Contact = ({ isSmall, isMobile, isTablet }) => {
   const formRef = useRef();
 
   const [loading, setLoading] = useState(false);
@@ -41,10 +41,13 @@ const Contact = () => {
   }
 
   return (
-    <section className="c-space my-20" id="contact">
-      <div className="relative min-h-90v flex items-center justify-center flex-col">
-        <img src="/assets/terminal.png" alt="terminal background" className="absolute inset-0 min-h-screen" />
-        <div className="contact-container">
+    <section className={(isMobile) ? "c-space mt-16" : "c-space mt-10"} id="contact">
+      <div className="relative min-h-[85vh] flex items-center justify-center flex-col">
+        {((isMobile) || (isSmall)) ? (<img src="/assets/terminal1-phone.png" alt="terminal background" className="absolute inset-0 h-full w-full object-cover" />)
+          : (isTablet) ? (<img src="/assets/terminal1-tablet.png" alt="terminal background" className="absolute inset-0 h-full w-full object-cover" />)
+            : (<img src="/assets/terminal1.png" alt="terminal background" className="absolute inset-0 h-full w-full object-cover" />)
+        }
+        <div className={(isMobile) ? "contact-container-phone" : "contact-container"}>
           <h3 className="head-text">Contact Me</h3>
           <p className="text-lg text-white-600 mt-3">Whether you're looking to build a new website, improve your existing platfomr, or bring a unique project to life, I'm here to help.</p>
           <form ref={formRef} onSubmit={handleSumbit} className="mt-12 flex flex-col space-y-7">
