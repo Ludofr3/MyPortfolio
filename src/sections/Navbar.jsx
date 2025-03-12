@@ -7,8 +7,9 @@ const NavItems = ({ setCurrentSection }) => {
         <ul className="nav-ul">
             {navLinks.map(({ id, href, name }) => (
                 <li key={id} className="nav-li">
-                    <a href={href} className="nav-li_a"
-                        onClick={() => { setCurrentSection(href) }} style={{ color: 'rgb(255, 133, 27)' }}>
+                    <a  href={href} className="nav-li_a"
+                        onClick={() => { setCurrentSection(href) }}
+                        style={{ color: 'rgb(255, 133, 27)' }}>
                         {name}
                     </a>
                 </li>
