@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
-import { OldComputers2 } from "../components/OldComputers2";
+import { OldComputers } from "../components/OldComputers";
 import { navLinks } from '../constants';
 import CanvasLoader from "../components/CanvasLoader";
 import CameraManager from '../components/CameraManager';
@@ -35,7 +35,7 @@ const Hero = ({ setCurrentSection, isSmall, isMobile, isTablet }) => {
               setCurrentSection={setCurrentSection}
               nodes={nodes}
             />
-            <OldComputers2
+            <OldComputers
               nodes={nodes}
               materials={materials}
               position={sizes.deskPosition}
