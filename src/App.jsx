@@ -31,7 +31,7 @@ const App = () => {
         {currentSection === '#Home' && <Hero setCurrentSection={setCurrentSection} isSmall={isSmall} isMobile={isMobile} isTablet={isTablet} />}
         {currentSection === '#About' && <About setCurrentSection={setCurrentSection} />}
         {currentSection === '#Work' && <Projects setCurrentSection={setCurrentSection} />}
-        {currentSection === '#Work' && <Clients setCurrentSection={setCurrentSection} />}
+        {/* {currentSection === '#Work' && <Clients setCurrentSection={setCurrentSection} />} */}
         {currentSection === '#Work' && <Experience setCurrentSection={setCurrentSection} />}
         {currentSection === '#Contact' && <Contact setCurrentSection={setCurrentSection} isSmall={isSmall} isMobile={isMobile} isTablet={isTablet} />}
       </AppLayout>
