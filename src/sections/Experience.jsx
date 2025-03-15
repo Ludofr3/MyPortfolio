@@ -7,14 +7,14 @@ import Developer from "../components/Developer"
 import { useState } from "react"
 
 const Experience = () => {
-  const [animationName, setAnimationName] = useState("idle");
+  const [animationName, setAnimationName] = useState("Idle");
   return (
     <section className="c-space my-20" id="experience">
       <div className="w-full text-white-600">
         <h3 className="head-text">My Work Experience</h3>
         <div className="work-container">
           <div className="work-canvas">
-            <Canvas>
+            {/* <Canvas>
               <ambientLight intensity={7} />
               <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
               <directionalLight position={[10, 10, 10]} intensity={1} />
@@ -22,7 +22,8 @@ const Experience = () => {
               <Suspense fallback={<CanvasLoader />}>
                 <Developer position-y={-3} scale={3} animationName={animationName} />
               </Suspense>
-            </Canvas>
+            </Canvas> */}
+            <img src="/assets/My_Work_Experience.svg" alt="work experience" className="w-full h-full" />
           </div>
           <div className="work-content">
             <div className="sm:py-10 py-5 sm:px-5 px-2.5">
