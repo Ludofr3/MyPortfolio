@@ -43,9 +43,9 @@ const Contact = ({ isSmall, isMobile, isTablet }) => {
   return (
     <section className={(isMobile) ? "c-space mt-16" : "c-space mt-10"} id="contact">
       <div className="relative min-h-[85vh] flex items-center justify-center flex-col">
-        {((isMobile) || (isSmall)) ? (<img src="/assets/terminal1-phone.png" alt="terminal background" className="absolute inset-0 h-full w-full object-cover" />)
-          : (isTablet) ? (<img src="/assets/terminal1-tablet.png" alt="terminal background" className="absolute inset-0 h-full w-full object-cover" />)
-            : (<img src="/assets/terminal1.png" alt="terminal background" className="absolute inset-0 h-full w-full object-cover" />)
+        {((isMobile) || (isSmall)) ? (<img src="/assets/terminal/terminal1-phone.png" alt="terminal background" className="absolute inset-0 h-full w-full object-cover" />)
+          : (isTablet) ? (<img src="/assets/terminal/terminal1-tablet.png" alt="terminal background" className="absolute inset-0 h-full w-full object-cover" />)
+            : (<img src="/assets/terminal/terminal1.png" alt="terminal background" className="absolute inset-0 h-full w-full object-cover" />)
         }
         <div className={(isMobile) ? "contact-container-phone" : "contact-container"}>
           <h3 className="head-text">Contact Me</h3>
@@ -89,7 +89,7 @@ const Contact = ({ isSmall, isMobile, isTablet }) => {
             </label>
             <button className="field-btn" type="submit" disabled={loading}>
               {loading ? 'Sending...' : 'Send Message'}
-              <img src="/assets/arrow-up.png" alt="arrow-up" className="field-btn_arrow" />
+              <img src="/assets/tools/arrow-up.png" alt="arrow-up" className="field-btn_arrow" />
             </button>
           </form>
         </div>

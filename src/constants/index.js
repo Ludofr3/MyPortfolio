@@ -48,19 +48,19 @@ export const myProjects = [
         subdesc:
             'Apollo is an imperative, statically typed language with mutable variables. It was proposed as part of a project at Epitech in collaboration with three other students.',
         href: 'https://github.com/iddeko/Apollo/tree/main',
-        texture: '/textures/project/project1.mp4',
-        logo: '/assets/apollo.png',
+        // texture: '/textures/project/project1.mp4',
+        logo: '/assets/projects/apollo.png',
         logoStyle: {
             backgroundColor: '#2A2A16',
             border: '0.2px solid #32361D',
             boxShadow: '0px 0px 60px 0px #AAA2304D',
         },
-        spotlight: '/assets/spotlight1.png',
+        spotlight: '/assets/spotlight/spotlight1.png',
         tags: [
             {
                 id: 1,
                 name: 'Haskell',
-                path: '/assets/haskell.svg',
+                path: '/assets/languages/haskell.svg',
             },
         ],
     },
@@ -70,19 +70,19 @@ export const myProjects = [
         subdesc:
             'Inspired by great declarative software of modern times like docker, we are aming to provide users with a very flexible solution, allowing all kinds of usages while staying declarative, simple and shareable.',
         href: 'https://github.com/Agartha-Software/Wormhole',
-        texture: '/textures/project/project2.mp4',
-        logo: '/assets/project-logo2.png',
+        // texture: '/textures/project/project2.mp4',
+        logo: '/assets/projects/wormhole.png',
         logoStyle: {
             backgroundColor: '#13202F',
             border: '0.2px solid #17293E',
             boxShadow: '0px 0px 60px 0px #2F6DB54D',
         },
-        spotlight: '/assets/spotlight2.png',
+        spotlight: '/assets/spotlight/spotlight2.png',
         tags: [
             {
                 id: 1,
                 name: 'Rust',
-                path: '/assets/rust.svg',
+                path: '/assets/languages/rust.svg',
             },
         ],
     },
@@ -106,8 +106,8 @@ export const workExperiences = [
         pos: 'Web Developer',
         duration: '2024 - Present',
         title: "Content integration on the Alex platform.",
-        icon: '/assets/wecareatwork.png',
-        animation: 'victory',
+        icon: '/assets/compagny/wecareatwork.png',
+        // animation: 'victory',
     },
     {
         id: 2,
@@ -115,8 +115,8 @@ export const workExperiences = [
         pos: 'Web Developer',
         duration: 'July 2024 - November 2024',
         title: "Creation of a visualization tool for rooftop solar panels (in collaboration with other freelancers).",
-        icon: '/assets/solteo.svg',
-        animation: 'clapping',
+        icon: '/assets/compagny/solteo.svg',
+        // animation: 'clapping',
     },
     {
         id: 3,
@@ -124,8 +124,8 @@ export const workExperiences = [
         pos: 'Technological transition developer',
         duration: 'February 2024 - June 2024',
         title: "Incubation of internal projects to support their technological transition, including the development of an intelligent organizational chart, an event website, and other initiatives to address their challenges.",
-        icon: '/assets/bpce.png',
-        animation: 'salute',
+        icon: '/assets/compagny/bpce.png',
+        // animation: 'salute',
     },
     {
         id: 4,
@@ -133,7 +133,7 @@ export const workExperiences = [
         pos: 'Developper full stack',
         duration: 'July 2022 - December 2022',
         title: "I developed a Bash script to move and modify files while performing a complete refactor of the web application's backend. I also contributed to adding new features and improving the design of several pages of the application.",
-        icon: '/assets/wecareatwork.png',
-        animation: 'salute',
+        icon: '/assets/compagny/wecareatwork.png',
+        // animation: 'salute',
     },
 ];

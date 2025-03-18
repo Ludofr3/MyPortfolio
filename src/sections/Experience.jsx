@@ -23,12 +23,13 @@ const Experience = () => {
                 <Developer position-y={-3} scale={3} animationName={animationName} />
               </Suspense>
             </Canvas> */}
-            <img src="/assets/My_Work_Experience.svg" alt="work experience" className="w-full h-full" />
+            <img src="/assets/work/My_Work_Experience.svg" alt="work experience" className="w-full h-full" />
           </div>
           <div className="work-content">
             <div className="sm:py-10 py-5 sm:px-5 px-2.5">
               {workExperiences.map(({ id, name, pos, icon, duration, title, animation }, index) => (
-                <div key={id} className="work-content_container group" onClick={() => setAnimationName(animation.toLocaleLowerCase())} onPointerOver={() => setAnimationName(animation.toLocaleLowerCase())} onPointerOut={() => setAnimationName('idle')}>
+                // <div key={id} className="work-content_container group" onClick={() => setAnimationName(animation.toLocaleLowerCase())} onPointerOver={() => setAnimationName(animation.toLocaleLowerCase())} onPointerOut={() => setAnimationName('idle')}>
+                <div key={id} className="work-content_container group">
                   <div className="flex flex-col h-full justify-start item-center py-2">
                     <div className="work-content_logo">
                       <img src={icon} alt="logo" className="w-full h-full" />

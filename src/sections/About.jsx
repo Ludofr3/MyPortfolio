@@ -17,7 +17,7 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
 
           <div className="grid-container">
-            <img src="/assets/grid1.png" alt="grid-1" className="w-full sm:h-[205px] h-fit object-contain" />
+            <img src="/assets/about/profile.png" alt="profile" className="w-full sm:h-[205px] h-fit object-contain" />
             <div>
               <p className="grid-headtext">Hi, I'm Ludovic</p>
               <p className="grid-subtext">4th year student developer with solid experience in software development. Based in France, I'm passionate about solving complex problems and creating innovative solutions. After four years of intensive learning, I have acquired an in-depth mastery of many languages and technologies, and am ready to take on new challenges in my 5th year and beyond. Flexible and adaptable, I work both in teams and independently.</p>
@@ -26,10 +26,9 @@ const About = () => {
         </div>
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img src="/assets/hello_world.png" alt="grid-2" className="w-full sm:h-[205px] h-fit object-contain" />
+            <img src="/assets/about/hello_world.png" alt="hello world" className="w-full sm:h-[205px] h-fit object-contain" />
             <div>
               <p className="grid-headtext">My Technical Arsenal</p>
-              {/* <p className="grid-subtext"> */}
               <ul className="grid-subtext">
                 <li>
                   <strong>Versioning :</strong> GitHub, GitLab, Bitbucket
@@ -44,7 +43,6 @@ const About = () => {
                   <strong>Systèmes & DevOps :</strong> Linux, Docker, Kubernetes, Jenkins, Ansible
                 </li>
               </ul>
-              {/* </p> */}
             </div>
           </div>
         </div>
@@ -75,7 +73,6 @@ const About = () => {
         </div>
         <div className="xl:col-span-2 xl:row-span-3">
           <div className="grid-container">
-            {/* <img src="/assets/grid3.png" alt="grid-3" className="w-full sm:h-[276px] h-fit object-contain" /> */}
             <div>
               <p className="grid-headtext">My Tech Vision</p>
               <p className="grid-subtext">For me, development is an opportunity to constantly learn and grow. I love exploring new languages and technologies, understanding how they work, and using them to create effective solutions. My aim is to continue to evolve in a constantly changing field, while bringing my rigor and creativity to every project.</p>
@@ -84,11 +81,10 @@ const About = () => {
         </div>
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="grid-container">
-            {/* <img src="/assets/grid4.png" alt="grid-4" className="w-full sm:h-[126px] h-fit object-cover sm:object-top" /> */}
             <div className="space-y-2">
               <p className="grid-subtext text-center">Contact me</p>
               <div className="copy-container" onClick={handleCopy}>
-                <img src={hasCopied ? '/assets/tick.svg' : '/assets/copy.svg'} alt="copy" />
+                <img src={hasCopied ? '/assets/tools/tick.svg' : '/assets/tools/copy.svg'} alt="copy" />
                 <p className="lg:text-2xl md:text-xl text-white">ludovicdechavagnac@gmail.com</p>
               </div>
             </div>
