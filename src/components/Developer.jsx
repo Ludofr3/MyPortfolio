@@ -3,25 +3,30 @@ import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
 
-const Developer = ({ animationName = 'idle', ...props }) => {
+const Developer = ({ animationName = 'Idle', ...props }) => {
   const group = useRef();
 
-  const { scene } = useGLTF('/models/animations/developer.glb');
+  const { scene } = useGLTF('/models/animations/biped_robot.glb');
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
 
-  const { animations: idleAnimation } = useFBX('/models/animations/idle.fbx');
-  const { animations: saluteAnimation } = useFBX('/models/animations/salute.fbx');
-  const { animations: clappingAnimation } = useFBX('/models/animations/clapping.fbx');
-  const { animations: victoryAnimation } = useFBX('/models/animations/victory.fbx');
+  // const { animations: idleAnimation } = useFBX('/models/animations/idle.fbx');
+  const { animations: idleAnimation } = useFBX('/models/animations/Idle.fbx');
+  // const { animations: saluteAnimation } = useFBX('/models/animations/salute.fbx');
+  // const { animations: clappingAnimation } = useFBX('/models/animations/clapping.fbx');
+  // const { animations: victoryAnimation } = useFBX('/models/animations/victory.fbx');
+  const { animations: dancingAnimation } = useFBX('/models/animations/Silly Dancing.fbx');
 
   idleAnimation[0].name = 'idle';
-  saluteAnimation[0].name = 'salute';
-  clappingAnimation[0].name = 'clapping';
-  victoryAnimation[0].name = 'victory';
+  // saluteAnimation[0].name = 'salute';
+  // clappingAnimation[0].name = 'clapping';
+  // victoryAnimation[0].name = 'victory';
+  dancingAnimation[0].name = 'silly';
 
   const { actions } = useAnimations(
-    [idleAnimation[0], saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]],
+    [idleAnimation[0],
+    // saluteAnimation[0], clappingAnimation[0], victoryAnimation[0]
+    dancingAnimation[0]],
     group,
   );
 
@@ -38,73 +43,52 @@ const Developer = ({ animationName = 'idle', ...props }) => {
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <primitive object={nodes.Hips} />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Hair.geometry}
-        material={materials.Wolf3D_Hair}
-        skeleton={nodes.Wolf3D_Hair.skeleton}
-      />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Glasses.geometry}
-        material={materials.Wolf3D_Glasses}
-        skeleton={nodes.Wolf3D_Glasses.skeleton}
-      />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Body.geometry}
-        material={materials.Wolf3D_Body}
-        skeleton={nodes.Wolf3D_Body.skeleton}
-      />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Outfit_Bottom.geometry}
-        material={materials.Wolf3D_Outfit_Bottom}
-        skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton}
-      />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Outfit_Footwear.geometry}
-        material={materials.Wolf3D_Outfit_Footwear}
-        skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton}
-      />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Outfit_Top.geometry}
-        material={materials.Wolf3D_Outfit_Top}
-        skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
-      />
-      <skinnedMesh
-        name="EyeLeft"
-        geometry={nodes.EyeLeft.geometry}
-        material={materials.Wolf3D_Eye}
-        skeleton={nodes.EyeLeft.skeleton}
-        morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary}
-        morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences}
-      />
-      <skinnedMesh
-        name="EyeRight"
-        geometry={nodes.EyeRight.geometry}
-        material={materials.Wolf3D_Eye}
-        skeleton={nodes.EyeRight.skeleton}
-        morphTargetDictionary={nodes.EyeRight.morphTargetDictionary}
-        morphTargetInfluences={nodes.EyeRight.morphTargetInfluences}
-      />
-      <skinnedMesh
-        name="Wolf3D_Head"
-        geometry={nodes.Wolf3D_Head.geometry}
-        material={materials.Wolf3D_Skin}
-        skeleton={nodes.Wolf3D_Head.skeleton}
-        morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary}
-        morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences}
-      />
-      <skinnedMesh
-        name="Wolf3D_Teeth"
-        geometry={nodes.Wolf3D_Teeth.geometry}
-        material={materials.Wolf3D_Teeth}
-        skeleton={nodes.Wolf3D_Teeth.skeleton}
-        morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
-        morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
-      />
+      <group name="Sketchfab_Scene">
+        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
+          <group name="RobotFBX" rotation={[Math.PI / 2, 0, 0]}>
+            <group name="Object_2">
+              <group name="RootNode">
+                <group name="Object_4">
+                  <primitive object={nodes._rootJoint} />
+                  <skinnedMesh
+                    name="Object_7"
+                    geometry={nodes.Object_7.geometry}
+                    material={materials.Metal}
+                    skeleton={nodes.Object_7.skeleton}
+                  />
+                  <skinnedMesh
+                    name="Object_8"
+                    geometry={nodes.Object_8.geometry}
+                    material={materials.Paint}
+                    skeleton={nodes.Object_8.skeleton}
+                  />
+                  <skinnedMesh
+                    name="Object_9"
+                    geometry={nodes.Object_9.geometry}
+                    material={materials.Plastic}
+                    skeleton={nodes.Object_9.skeleton}
+                  />
+                  <group name="Object_6" rotation={[-Math.PI / 2, 0, 0]} />
+                  <group name="Robot_Mesh" rotation={[-Math.PI / 2, 0, 0]} />
+                  <group name="Ground" position={[0, -4.344, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+                    <mesh
+                      name="Ground_Ground_0"
+                      castShadow
+                      receiveShadow
+                      geometry={nodes.Ground_Ground_0.geometry}
+                      material={materials.Ground}
+                    />
+                  </group>
+                </group>
+              </group>
+            </group>
+          </group>
+        </group>
+      </group>
     </group>
   );
 };
 
-useGLTF.preload('/models/animations/developer.glb');
+useGLTF.preload('/models/animations/biped_robot.glb');
 
 export default Developer;
