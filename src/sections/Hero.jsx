@@ -13,7 +13,7 @@ import { useGLTF } from '@react-three/drei';
 const Hero = ({ setCurrentSection, isSmall, isMobile, isTablet }) => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
-  const { nodes, materials } = useGLTF('/models/OldComputers2.4.1.glb');
+  const { nodes, materials } = useGLTF('/models/OldComputers.glb');
   const [activeSpline, setActiveSpline] = useState(null);
 
   const handleScreenClick = (target) => {
