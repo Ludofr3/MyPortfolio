@@ -4,6 +4,16 @@ import { navLinks } from '../constants';
 import { Text3D } from '@react-three/drei';
 import * as THREE from 'three';
 
+function TextOverlayShowAll() {
+  return (
+    <group>
+      <TextOverlay showText={4} />
+      <TextOverlay showText={2} />
+      <TextOverlay showText={3} />
+    </group>
+  );
+}
+
 function TextOverlay({ showText }) {
   const selectedLink = navLinks.find(link => link.id === showText);
 
@@ -37,4 +47,4 @@ function TextOverlay({ showText }) {
   );
 }
 
-export default TextOverlay;
+export default TextOverlayShowAll;

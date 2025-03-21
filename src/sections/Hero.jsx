@@ -41,33 +41,6 @@ const Hero = ({ setCurrentSection, isSmall, isMobile, isTablet }) => {
               scale={sizes.deskScale}
               onScreenClick={handleScreenClick}
             />
-            <SpotLightWithTarget
-              position={[0, 8, 0]}
-              targetHeight={[-3, 0, -1]}
-              distance={20}
-              angle={0.5}
-              attenuation={15}
-              anglePower={2}
-              color="white"
-            />
-            <SpotLightWithTarget
-              position={[0, 8, 0]}
-              targetHeight={[-1.75, 1.5, -2.75]}
-              distance={20}
-              angle={0.5}
-              attenuation={20}
-              anglePower={1}
-              color="white"
-            />
-            <SpotLightWithTarget
-              position={[0, 8, 0]}
-              targetHeight={[3.5, 2, -0.2]}
-              distance={20}
-              angle={0.5}
-              attenuation={15}
-              anglePower={2}
-              color="white"
-            />
             <ambientLight intensity={0.1} />
             <directionalLight position={[10, 10, 10]} intensity={1} />
           </Suspense>
