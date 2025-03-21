@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import { useMediaQuery } from "react-responsive";
 import { calculateSizes } from "../constants";
 import { OldComputers } from "../components/OldComputers";
-import { navLinks } from '../constants';
 import CanvasLoader from "../components/CanvasLoader";
 import CameraManager from '../components/CameraManager';
 import PropTypes from 'prop-types';
 import { useGLTF } from '@react-three/drei';
+import SpotLightWithTarget from '../components/SpotLightWithTarget';
 
 const Hero = ({ setCurrentSection, isSmall, isMobile, isTablet }) => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
@@ -42,7 +41,34 @@ const Hero = ({ setCurrentSection, isSmall, isMobile, isTablet }) => {
               scale={sizes.deskScale}
               onScreenClick={handleScreenClick}
             />
-            <ambientLight intensity={0.5} />
+            <SpotLightWithTarget
+              position={[0, 8, 0]}
+              targetHeight={[-3, 0, -1]}
+              distance={20}
+              angle={0.5}
+              attenuation={15}
+              anglePower={2}
+              color="white"
+            />
+            <SpotLightWithTarget
+              position={[0, 8, 0]}
+              targetHeight={[-1.75, 1.5, -2.75]}
+              distance={20}
+              angle={0.5}
+              attenuation={20}
+              anglePower={1}
+              color="white"
+            />
+            <SpotLightWithTarget
+              position={[0, 8, 0]}
+              targetHeight={[3.5, 2, -0.2]}
+              distance={20}
+              angle={0.5}
+              attenuation={15}
+              anglePower={2}
+              color="white"
+            />
+            <ambientLight intensity={0.1} />
             <directionalLight position={[10, 10, 10]} intensity={1} />
           </Suspense>
         </Canvas>
