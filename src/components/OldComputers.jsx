@@ -1026,7 +1026,7 @@ export function OldComputers(props) {
           scale={0.5}
         />
         <TextOverlayShowAll />
-        <group name="Screen_A001" position={[-2.731, 0.629, -0.522]} rotation={[0, 1.087, 0]}>
+        <group name="Screen_A001" position={[-2.731, 0.629, -0.522]} rotation={[0, 1.087, 0]} onClick={() => props.onScreenClick(navLinks[2])}>
           <mesh
             name="Cube018"
             castShadow
@@ -1040,12 +1040,12 @@ export function OldComputers(props) {
             receiveShadow
             geometry={nodes.Cube018_1.geometry}
             material={materials.MyWork}
-            // onPointerEnter={() => setShowText(3)}
-            // onPointerLeave={() => setShowText(0)}
-            onClick={() => props.onScreenClick(navLinks[2])}
+          // onPointerEnter={() => setShowText(3)}
+          // onPointerLeave={() => setShowText(0)}
+          // onClick={() => props.onScreenClick(navLinks[2])}
           />
         </group>
-        <group name="Screen_B001" position={[-1.711, 3.015, -1.98]} rotation={[0, 1.002, 0]}>
+        <group name="Screen_B001" position={[-1.711, 3.015, -1.98]} rotation={[0, 1.002, 0]} onClick={() => props.onScreenClick(navLinks[1])}>
           <mesh
             name="Cube014"
             castShadow
@@ -1059,9 +1059,9 @@ export function OldComputers(props) {
             receiveShadow
             geometry={nodes.Cube014_1.geometry}
             material={materials.About}
-            // onPointerEnter={() => setShowText(2)}
-            // onPointerLeave={() => setShowText(0)}
-            onClick={() => props.onScreenClick(navLinks[1])}
+          // onPointerEnter={() => setShowText(2)}
+          // onPointerLeave={() => setShowText(0)}
+          // onClick={() => props.onScreenClick(navLinks[1])}
           />
         </group>
         <group
@@ -1108,7 +1108,9 @@ export function OldComputers(props) {
           name="Screen_C002"
           position={[3.11, 2.145, -0.18]}
           rotation={[0, -0.793, 0]}
-          scale={0.81}>
+          scale={0.81}
+          onClick={() => props.onScreenClick(navLinks[3])}
+        >
           <mesh
             name="Cube027"
             castShadow
@@ -1122,9 +1124,9 @@ export function OldComputers(props) {
             receiveShadow
             geometry={nodes.Cube027_1.geometry}
             material={materials.Contact}
-            // onPointerEnter={() => setShowText(4)}
-            // onPointerLeave={() => setShowText(0)}
-            onClick={() => props.onScreenClick(navLinks[3])}
+          // onPointerEnter={() => setShowText(4)}
+          // onPointerLeave={() => setShowText(0)}
+          // onClick={() => props.onScreenClick(navLinks[3])}
           />
           {/* >
             <meshMatcapMaterial map={screenTxt} />

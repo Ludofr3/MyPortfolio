@@ -14,8 +14,7 @@ const Hero = ({ setCurrentSection, isSmall, isMobile, isTablet }) => {
 
   const { nodes, materials } = useGLTF('/models/OldComputers.glb');
   const [activeSpline, setActiveSpline] = useState(null);
-
-  const handleScreenClick = (target) => {
+  const onScreenClick = (target) => {
     setActiveSpline(target.name); // Déclenche l'animation vers l'écran
   };
 
@@ -39,10 +38,21 @@ const Hero = ({ setCurrentSection, isSmall, isMobile, isTablet }) => {
               materials={materials}
               position={sizes.deskPosition}
               scale={sizes.deskScale}
-              onScreenClick={handleScreenClick}
+              onScreenClick={onScreenClick}
             />
             <ambientLight intensity={0.1} />
-            <directionalLight position={[10, 10, 10]} intensity={1} />
+            <SpotLightWithTarget
+              position={[0, 8, 0]}
+              targetHeight={[0, 0, 0]}
+              distance={20}
+              angle={3.5}
+              // penumbra={1}
+              attenuation={10}
+              anglePower={5}
+              color="#ffffff"
+              intensity={200}
+            />
+            {/* <directionalLight position={[0, 10, 0]} intensity={1.5} /> */}
           </Suspense>
         </Canvas>
       </div>

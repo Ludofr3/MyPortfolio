@@ -38,7 +38,7 @@ const CameraManager = ({ activeSpline, setCurrentSection, nodes }) => {
           controlPoints.push(globalPoint);
         }
         if (activeSpline == "Work") {
-          console.log("REVERSE");
+          // console.log("REVERSE");
           controlPoints.reverse();
         }
         // controlPoints.forEach((point, index) => {
@@ -88,8 +88,8 @@ const CameraManager = ({ activeSpline, setCurrentSection, nodes }) => {
       if (newProgress >= 1) {
         camera.position.copy(curve.getPointAt(0)); // Position à progress = 0 (départ)
         camera.position.copy(curve.getPointAt(1)); // Position à progress = 1 (arrivée)
-        console.log(curve.getPointAt(0));
-        console.log(curve.getPointAt(1));
+        // console.log(curve.getPointAt(0));
+        // console.log(curve.getPointAt(1));
         setIsAnimating(false);
         setCurrentSection(`#${activeSpline}`);
         setCurve(null);
