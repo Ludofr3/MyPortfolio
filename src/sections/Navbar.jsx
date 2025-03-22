@@ -7,7 +7,7 @@ const NavItems = ({ setCurrentSection }) => {
         <ul className="nav-ul">
             {navLinks.map(({ id, href, name }) => (
                 <li key={id} className="nav-li">
-                    <a  href={href} className="nav-li_a"
+                    <a href={href} className="nav-li_a"
                         onClick={() => { setCurrentSection(href) }}
                         style={{ color: 'rgb(255, 133, 27)' }}>
                         {name}
@@ -28,7 +28,7 @@ const Navbar = ({ setCurrentSection }) => {
                 <div className="flex items-center justify-between items-center py-5 mx-auto c-space">
                     <a href="/"
                         className="text-neutral-400 font-blod text-xl hover:text-white transition-colors">
-                        <img src="public/assets/Logo.png" alt="Logo" style={{ height: '40px' }} />
+                        <img src="/assets/Logo.png" alt="Logo" style={{ height: '40px' }} />
                     </a>
                     <button onClick={tooglMenu}
                         className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
