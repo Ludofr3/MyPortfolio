@@ -1,9 +1,5 @@
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { myProjects } from "../constants"
-import { Center, OrbitControls } from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import CanvasLoader from "../components/CanvasLoader";
-import DemoComputer from "../components/DemoComputer";
 
 const Projects = () => {
   const [selectedProjetIndex, setSelectedProjetIndex] = useState(0);

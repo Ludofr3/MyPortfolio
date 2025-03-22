@@ -12,7 +12,7 @@ import SpotLightWithTarget from '../components/SpotLightWithTarget';
 const Hero = ({ setCurrentSection, isSmall, isMobile, isTablet }) => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
-  const { nodes, materials } = useGLTF('/models/OldComputers.glb');
+  const { nodes, materials } = useGLTF('/assets/models/OldComputers.glb');
   const [activeSpline, setActiveSpline] = useState(null);
   const onScreenClick = (target) => {
     setActiveSpline(target.name); // Déclenche l'animation vers l'écran

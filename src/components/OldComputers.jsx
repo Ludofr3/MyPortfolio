@@ -11,7 +11,7 @@ export function OldComputers(props) {
   const group = useRef()
   const nodes = props.nodes;
   const materials = props.materials;
-  const error = useVideoTexture('/textures/error.mp4');
+  const error = useVideoTexture('/assets/textures/error.mp4');
   // const [showText, setShowText] = useState(0);
 
   useEffect(() => {
@@ -1253,4 +1253,4 @@ export function OldComputers(props) {
   )
 }
 
-useGLTF.preload('/models/OldComputers.glb')
+useGLTF.preload('/assets/models/OldComputers.glb')

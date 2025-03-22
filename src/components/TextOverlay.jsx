@@ -35,7 +35,7 @@ function TextOverlay({ showText }) {
   const textPosition = new THREE.Vector3(...selectedLink.position).add(globalOffset);
   return (
     <Text3D
-      font={'/public/assets/fonts/Roboto_Regular.json'}
+      font={'/assets/fonts/Roboto_Regular.json'}
       size={0.4}
       height={0.1}
       position={textPosition.toArray()}
