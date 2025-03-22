@@ -1253,4 +1253,4 @@ export function OldComputers(props) {
   )
 }
 
-useGLTF.preload('/OldComputersglb')
+useGLTF.preload('/models/OldComputers.glb')
