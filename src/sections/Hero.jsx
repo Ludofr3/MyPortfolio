@@ -8,11 +8,12 @@ import CameraManager from '../components/CameraManager';
 import PropTypes from 'prop-types';
 import { useGLTF } from '@react-three/drei';
 import SpotLightWithTarget from '../components/SpotLightWithTarget';
+import { baseUrl } from '../config';
 
 const Hero = ({ setCurrentSection, isSmall, isMobile, isTablet }) => {
   const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
-  const { nodes, materials } = useGLTF('/assets/models/OldComputers.glb');
+  const { nodes, materials } = useGLTF(`${baseUrl}assets/models/OldComputers.glb`);
   const [activeSpline, setActiveSpline] = useState(null);
   const onScreenClick = (target) => {
     setActiveSpline(target.name); // Déclenche l'animation vers l'écran

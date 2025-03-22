@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { navLinks } from '../constants/index.js';
 import { color } from 'three/tsl';
+import { baseUrl } from '../config';
 
 const NavItems = ({ setCurrentSection }) => {
     return (
@@ -28,12 +29,12 @@ const Navbar = ({ setCurrentSection }) => {
                 <div className="flex items-center justify-between items-center py-5 mx-auto c-space">
                     <a href="/"
                         className="text-neutral-400 font-blod text-xl hover:text-white transition-colors">
-                        <img src="/assets/Logo.png" alt="Logo" style={{ height: '40px' }} />
+                        <img src={`${baseUrl}assets/Logo.png`} alt="Logo" style={{ height: '40px' }} />
                     </a>
                     <button onClick={tooglMenu}
                         className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
                         aria-label="Toogle Menu">
-                        <img src={isOpen ? "/assets/tools/close.svg" : "/assets/tools/menu.svg"}
+                        <img src={isOpen ? `${baseUrl}assets/tools/close.svg` : `${baseUrl}assets/tools/menu.svg`}
                             alt="toggle"
                             className="w-6 h-6" />
                     </button>

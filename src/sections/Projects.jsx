@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { myProjects } from "../constants"
+import { baseUrl } from '../config';
 
 const Projects = () => {
   const [selectedProjetIndex, setSelectedProjetIndex] = useState(0);
@@ -41,21 +42,21 @@ const Projects = () => {
               </div>
               <a className="flex items-center gap-2 cursor-pointer text-white-600" href={currentProject.href} target="_blank" rel="noreferrer">
                 <p>Check Live Site</p>
-                <img src="/assets/tools/arrow-up.png" alt="arrow" className="w-3 h-3" />
+                <img src={`${baseUrl}assets/tools/arrow-up.png`} alt="arrow" className="w-3 h-3" />
               </a>
             </div>
             <div className="flex justify-between item-center mt-7">
               <button className="arrow-btn" onClick={() => handleNavigation('previous')}>
-                <img src="/assets/tools/left-arrow.png" alt="left arrow" className="w-4 h-4" />
+                <img src={`${baseUrl}assets/tools/left-arrow.png`} alt="left arrow" className="w-4 h-4" />
               </button>
               <button className="arrow-btn" onClick={() => handleNavigation('next')}>
-                <img src="/assets/tools/right-arrow.png" alt="right arrow" className="w-4 h-4" />
+                <img src={`${baseUrl}assets/tools/right-arrow.png`} alt="right arrow" className="w-4 h-4" />
               </button>
 
             </div>
           </div>
           <div className="border border-black-300 bg-black-200 rounded-lg h-96 md:h-full">
-            <img src="/assets/work/development_illustration.svg" />
+            <img src={`${baseUrl}assets/work/development_illustration.svg`} />
             {/* <Canvas>
               <ambientLight intensity={Math.PI} />
               <directionalLight position={[10, 10, 5]} />
