@@ -33,7 +33,7 @@ const Navbar = ({ setCurrentSection }) => {
                     <button onClick={tooglMenu}
                         className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
                         aria-label="Toogle Menu">
-                        <img src={isOpen ? "assets/tools/close.svg" : "assets/tools/menu.svg"}
+                        <img src={isOpen ? "/assets/tools/close.svg" : "/assets/tools/menu.svg"}
                             alt="toggle"
                             className="w-6 h-6" />
                     </button>

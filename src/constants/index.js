@@ -35,7 +35,7 @@ export const clientReviews = [
         id: 1,
         name: 'Emily Johnson',
         position: 'Marketing Director at GreenLeaf',
-        img: 'assets/review1.png',
+        img: '/assets/review1.png',
         review:
             'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
     },
