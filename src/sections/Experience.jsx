@@ -1,10 +1,6 @@
-import { Canvas } from "@react-three/fiber"
 import { workExperiences } from "../constants"
-import { OrbitControls } from "@react-three/drei"
-import { Suspense } from "react"
-import CanvasLoader from "../components/CanvasLoader"
-import Developer from "../components/Developer"
 import { useState } from "react"
+import { baseUrl } from '../config';
 
 const Experience = () => {
   const [animationName, setAnimationName] = useState("Idle");
@@ -23,7 +19,7 @@ const Experience = () => {
                 <Developer position-y={-3} scale={3} animationName={animationName} />
               </Suspense>
             </Canvas> */}
-            <img src="/assets/work/My_Work_Experience.svg" alt="work experience" className="w-full h-full" />
+            <img src={`${baseUrl}assets/work/My_Work_Experience.svg`} alt="work experience" className="w-full h-full" />
           </div>
           <div className="work-content">
             <div className="sm:py-10 py-5 sm:px-5 px-2.5">

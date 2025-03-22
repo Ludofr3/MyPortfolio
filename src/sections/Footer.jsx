@@ -1,4 +1,4 @@
-
+import { baseUrl } from '../config';
 const Footer = () => {
 
   return (
@@ -11,16 +11,16 @@ const Footer = () => {
       <div className="flex gap-3">
         <div className="social-icon">
           <a className="w-1/2 h-1/2" href="https://github.com/Ludofr3" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/social_network/github.svg" alt="github" />
+            <img src={`${baseUrl}assets/social_network/github.svg`} alt="github" />
           </a>
         </div>
         <div className="social-icon">
           <a className="w-1/2 h-1/2" href="https://www.linkedin.com/in/ludovic-de-chavagnac" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/social_network/linkedin.png" alt="linkedin" />
+            <img src={`${baseUrl}assets/social_network/linkedin.png`} alt="linkedin" />
           </a>
         </div>
         {/* <div className="social-icon">
-          <img src="/assets/instagram.svg" alt="github" className="w-1/2 h-1/2" />
+          <img src="${baseUrl}assets/instagram.svg" alt="github" className="w-1/2 h-1/2" />
         </div> */}
       </div>
       <p >© 2024 Ludovic. All rights reserved</p>

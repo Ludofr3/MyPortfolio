@@ -6,12 +6,13 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useGLTF, useTexture, useVideoTexture } from '@react-three/drei'
 import TextOverlayShowAll from './TextOverlay';
 import { navLinks } from '../constants';
+import { baseUrl } from '../config';
 
 export function OldComputers(props) {
   const group = useRef()
   const nodes = props.nodes;
   const materials = props.materials;
-  const error = useVideoTexture('/textures/error.mp4');
+  const error = useVideoTexture(`${baseUrl}assets/textures/error.mp4`);
   // const [showText, setShowText] = useState(0);
 
   useEffect(() => {
@@ -1253,4 +1254,4 @@ export function OldComputers(props) {
   )
 }
 
-useGLTF.preload('/OldComputersglb')
+useGLTF.preload(`${baseUrl}assets/models/OldComputers.glb`)

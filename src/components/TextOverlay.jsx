@@ -3,6 +3,7 @@ import { Html } from '@react-three/drei';
 import { navLinks } from '../constants';
 import { Text3D } from '@react-three/drei';
 import * as THREE from 'three';
+import { baseUrl } from '../config';
 
 function TextOverlayShowAll() {
   return (
@@ -35,7 +36,7 @@ function TextOverlay({ showText }) {
   const textPosition = new THREE.Vector3(...selectedLink.position).add(globalOffset);
   return (
     <Text3D
-      font={'/public/assets/fonts/Roboto_Regular.json'}
+      font={`${baseUrl}assets/fonts/Roboto_Regular.json`}
       size={0.4}
       height={0.1}
       position={textPosition.toArray()}
