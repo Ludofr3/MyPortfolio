@@ -27,7 +27,7 @@ const Navbar = ({ setCurrentSection }) => {
         <header className="fixed top-0 left-0 right-0 z-50 bg-black/90">
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center justify-between items-center py-5 mx-auto c-space">
-                    <a href="/"
+                    <a href={`${baseUrl}`}
                         className="text-neutral-400 font-blod text-xl hover:text-white transition-colors">
                         <img src={`${baseUrl}assets/Logo.png`} alt="Logo" style={{ height: '40px' }} />
                     </a>
