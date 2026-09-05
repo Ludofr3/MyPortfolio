@@ -44,6 +44,47 @@ export const navLinks = [
 
 export const myProjects = [
     {
+        title: 'BOT - BlOcking Toolkit',
+        desc: 'BOT is a Python research sandbox for developing and testing interactive quad and hex mesh blocking algorithms, with a focus on programmatic and potentially AI-driven workflows.',
+        subdesc: 'BOT is an open source project created to help the prototyping of CEA doctoral students during their theses directly or indirectly linked to curved meshes.',
+        href: 'https://github.com/LIHPC-Computational-Geometry/bot',
+        logo: `${baseUrl}assets/projects/LIHPC.png`,
+        logoStyle: {
+            backgroundColor: '#543b57',
+            border: '0.2px solid #2214a6',
+            boxShadow: '0px 0px 60px 0px #AAA2304D',
+        },
+        spotlight: `${baseUrl}assets/spotlight/spotlight1.png`,
+        tags: [
+            {
+                id: 1,
+                name: 'Python',
+                path: `${baseUrl}assets/languages/python.svg`,
+            },
+        ],
+    },
+    {
+        title: 'FerriSpline',
+        desc: 'High-performance library for creating, evaluating, and manipulating NURBS and Bézier curves. A pure Rust computational core (core_rust) provides memory-safe geometry algorithms; a Python extension (ferrispline) exposes them through PyO3 and Maturin.',
+        subdesc: 'FerriSpline is an open source project, use in the BOT project. It is possible to use it into another project than BOT.',
+        href: 'https://github.com/LIHPC-Computational-Geometry/ferrispline',
+        logo: `${baseUrl}assets/projects/LIHPC.png`,
+        logoStyle: {
+            backgroundColor: '#543b57',
+            border: '0.2px solid #2214a6',
+            boxShadow: '0px 0px 60px 0px #AAA2304D',
+        },
+        spotlight: `${baseUrl}assets/spotlight/spotlight1.png`,
+        tags: [
+            {
+                id: 1,
+                name: 'Rust',
+                path: `${baseUrl}assets/languages/rust.svg`,
+            },
+        ],
+
+    },
+    {
         title: 'Apollo',
         desc: 'Apollo is a scripting language designed to be as easy to use as Bash while offering a clearer and more accessible syntax.',
         subdesc:
@@ -99,42 +140,54 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
         targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
     };
 };
-
 export const workExperiences = [
     {
         id: 1,
-        name: 'Freelance - Kepler HR',
-        pos: 'Web Developer',
-        duration: '2024 - Present',
-        title: "Content integration on the Alex platform.",
-        icon: `${baseUrl}assets/compagny/wecareatwork.png`,
-        // animation: 'victory',
+        name: 'CEA',
+        pos: 'R&D Software Engineer',
+        duration: 'March 2026 - August 2026',
+        title: "Developed a parametric curve modeling engine in Rust featuring state management and indexed geometry storage (FerriSpline). Built a Python API and created an interactive Python modeling environment (BOT).",
+        icon: `${baseUrl}assets/compagny/cea.svg`,
     },
     {
         id: 2,
-        name: 'Freelance - Solteo',
-        pos: 'Web Developer',
-        duration: 'July 2024 - November 2024',
-        title: "Creation of a visualization tool for rooftop solar panels (in collaboration with other freelancers).",
-        icon: `${baseUrl}assets/compagny/solteo.svg`,
-        // animation: 'clapping',
+        name: 'KEPLER HR (WeCare@Work)',
+        pos: 'Fullstack Developer',
+        duration: 'September 2025 - February 2026',
+        title: "Designed a monorepo architecture (Next.js, TypeScript, GraphQL, Prisma) to migrate a legacy PHP/MVC monolith toward a modular system. Implemented a reverse proxy to ensure service continuity between legacy and new modules.",
+        icon: `${baseUrl}assets/compagny/wecareatwork.png`,
     },
     {
         id: 3,
-        name: 'BPCE-IT',
-        pos: 'Technological transition developer',
-        duration: 'February 2024 - June 2024',
-        title: "Incubation of internal projects to support their technological transition, including the development of an intelligent organizational chart, an event website, and other initiatives to address their challenges.",
-        icon: `${baseUrl}assets/compagny/bpce.png`,
-        // animation: 'salute',
+        name: 'Kepler HR (WeCare@Work)',
+        pos: 'Freelance Web Developer',
+        duration: '2024 - 2026',
+        title: "Content integration on the Alex platform (WeCare@Work).",
+        icon: `${baseUrl}assets/compagny/wecareatwork.png`,
     },
     {
         id: 4,
-        name: 'KEPLER HR',
-        pos: 'Developper full stack',
+        name: 'Solteo',
+        pos: 'Freelance Web Developer',
+        duration: 'July 2024 - November 2024',
+        title: "Creation of a visualization tool for rooftop solar panels (in collaboration with other freelancers).",
+        icon: `${baseUrl}assets/compagny/solteo.svg`,
+    },
+    {
+        id: 5,
+        name: 'BPCE-IT',
+        pos: 'Technological Transition Developer',
+        duration: 'February 2024 - June 2024',
+        title: "Incubation of internal projects supporting technological transition, including the development of an intelligent organizational chart and an event website.",
+        icon: `${baseUrl}assets/compagny/bpce.png`,
+    },
+    {
+        id: 6,
+        name: 'KEPLER HR (WeCare@Work)',
+        pos: 'Fullstack Developer',
         duration: 'July 2022 - December 2022',
-        title: "I developed a Bash script to move and modify files while performing a complete refactor of the web application's backend. I also contributed to adding new features and improving the design of several pages of the application.",
+        title: "Developed a Bash script for automated file processing and carried out a comprehensive backend refactoring of the web application.",
         icon: `${baseUrl}assets/compagny/wecareatwork.png`,
-        // animation: 'salute',
     },
 ];
+

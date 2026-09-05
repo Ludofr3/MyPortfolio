@@ -21,7 +21,7 @@ const About = () => {
             <img src={`${baseUrl}assets/about/profile.png`} alt="profile" className="w-full sm:h-[205px] h-fit object-contain" />
             <div>
               <p className="grid-headtext">Hi, I'm Ludovic</p>
-              <p className="grid-subtext">4th year student developer with solid experience in software development. Based in France, I'm passionate about solving complex problems and creating innovative solutions. After four years of intensive learning, I have acquired an in-depth mastery of many languages and technologies, and am ready to take on new challenges in my 5th year and beyond. Flexible and adaptable, I work both in teams and independently.</p>
+              <p className="grid-subtext">Software Engineer based in France, recently graduated and passionate about building clean, scalable solutions to complex problems. Through rigorous academic training and hands-on project experience, I have built a versatile technical stack across various languages and frameworks. Adaptable and proactive, I thrive both in collaborative teams and autonomously, and I am currently seeking new full-time opportunities.</p>
             </div>
           </div>
         </div>
@@ -35,10 +35,10 @@ const About = () => {
                   <strong>Versioning :</strong> GitHub, GitLab, Bitbucket
                 </li>
                 <li>
-                  <strong>Langages :</strong> Assembleur, Haskell, C, C++, Rust, Python, Bash
+                  <strong>Langages :</strong> C, C++, Rust, Python, Bash, Assembleur, Haskell, Typst
                 </li>
                 <li>
-                  <strong>Web & Mobile :</strong> PHP, CSS, SCSS, HTML, SQL, React Native, Three.js, Angular
+                  <strong>Web & Mobile :</strong> PHP, CSS, SCSS, HTML, SQL, React Native, Three.js, Angular, Typescript, Prisma, Nuxtjs, GraphQL
                 </li>
                 <li>
                   <strong>Systèmes & DevOps :</strong> Linux, Docker, Kubernetes, Jenkins, Ansible
