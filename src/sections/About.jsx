@@ -2,8 +2,9 @@ import Globe from "react-globe.gl"
 import { useState } from "react"
 import Button from "../components/Button"
 import { baseUrl } from '../config';
+import PropTypes from 'prop-types';
 
-const About = () => {
+const About = ({ setCurrentSection }) => {
   const [hasCopied, setHasCopied] = useState(false);
   const handleCopy = () => {
     navigator.clipboard.writeText('ludovicdechavagnac@gmail.com');
@@ -20,7 +21,7 @@ const About = () => {
           <div className="grid-container">
             <img src={`${baseUrl}assets/about/profile.png`} alt="profile" className="w-full sm:h-[205px] h-fit object-contain" />
             <div>
-              <p className="grid-headtext">Hi, I'm Ludovic</p>
+              <p className="grid-headtext">Hi, I&apos;m Ludovic</p>
               <p className="grid-subtext">Software Engineer based in France, recently graduated and passionate about building clean, scalable solutions to complex problems. Through rigorous academic training and hands-on project experience, I have built a versatile technical stack across various languages and frameworks. Adaptable and proactive, I thrive both in collaborative teams and autonomously, and I am currently seeking new full-time opportunities.</p>
             </div>
           </div>
@@ -47,16 +48,18 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="col-span-1 xl:row-span-4">
+        <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <div className="rounded-3xl w-full sm:h-[226px] h-fit flex justify-center items-center">
+            <div className="rounded-3xl w-full max-w-[240px] mx-auto aspect-square flex justify-center items-center overflow-hidden">
               <Globe
-                height={326}
-                width={326}
+                height={240}
+                width={240}
                 backgroundColor="rgba(0, 0, 0, 0)"
                 backgroundImageOpacity={0.5}
                 showAtmosphere
                 showGraticules
+                animateIn={false}
+                rendererConfig={{ antialias: true, alpha: true, devicePixelRatio: 1 }}
                 globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
                 bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.png"
               />
@@ -66,9 +69,9 @@ const About = () => {
                 I work remotly accross most timezones.
               </p>
               <p className="grid-subtext">
-                I'm based in France, with remote work avaible.
+                I&apos;m based in France, with remote work avaible.
               </p>
-              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+              <Button name="Contact Me" isBeam containerClass="w-full mt-10" onClick={() => setCurrentSection('#Contact')} />
             </div>
           </div>
         </div>
@@ -86,7 +89,7 @@ const About = () => {
               <p className="grid-subtext text-center">Contact me</p>
               <div className="copy-container" onClick={handleCopy}>
                 <img src={hasCopied ? `${baseUrl}assets/tools/tick.svg` : `${baseUrl}assets/tools/copy.svg`} alt="copy" />
-                <p className="lg:text-2xl md:text-xl text-white">ludovicdechavagnac@gmail.com</p>
+                <p className="lg:text-2xl md:text-xl text-white break-all">ludovicdechavagnac@gmail.com</p>
               </div>
             </div>
           </div>
@@ -95,5 +98,9 @@ const About = () => {
     </section>
   )
 }
+
+About.propTypes = {
+  setCurrentSection: PropTypes.func,
+};
 
 export default About

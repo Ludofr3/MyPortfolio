@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       minHeight: {
-        '90v': '90vh',
+        '90v': '90dvh',
       },
       fontFamily: {
         generalsans: ['General Sans', 'sans-serif'],

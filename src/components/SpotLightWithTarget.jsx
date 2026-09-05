@@ -2,6 +2,7 @@ import { SpotLight } from '@react-three/drei';
 import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { useThree } from '@react-three/fiber';
+import PropTypes from 'prop-types';
 
 function SpotLightWithTarget({ position, targetHeight, ...props }) {
   // Accéder à la scène via useThree
@@ -12,9 +13,10 @@ function SpotLightWithTarget({ position, targetHeight, ...props }) {
 
   // Ajouter la cible à la scène lors du montage et la retirer lors du démontage
   useEffect(() => {
-    scene.add(targetRef.current);
+    const target = targetRef.current;
+    scene.add(target);
     return () => {
-      scene.remove(targetRef.current);
+      scene.remove(target);
     };
   }, [scene]);
 
@@ -31,5 +33,10 @@ function SpotLightWithTarget({ position, targetHeight, ...props }) {
     />
   );
 }
+
+SpotLightWithTarget.propTypes = {
+  position: PropTypes.arrayOf(PropTypes.number),
+  targetHeight: PropTypes.arrayOf(PropTypes.number),
+};
 
 export default SpotLightWithTarget;

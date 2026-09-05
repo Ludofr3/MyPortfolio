@@ -1,9 +1,8 @@
-import React from 'react';
-import { Html } from '@react-three/drei';
 import { navLinks } from '../constants';
 import { Text3D } from '@react-three/drei';
 import * as THREE from 'three';
 import { baseUrl } from '../config';
+import PropTypes from 'prop-types';
 
 function TextOverlayShowAll() {
   return (
@@ -47,5 +46,9 @@ function TextOverlay({ showText }) {
     </Text3D>
   );
 }
+
+TextOverlay.propTypes = {
+  showText: PropTypes.number,
+};
 
 export default TextOverlayShowAll;

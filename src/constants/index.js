@@ -132,8 +132,8 @@ export const myProjects = [
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
-        deskScale: isSmall ? 0.8 : isMobile ? 1 : 1.5,
-        deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -3.5, 0],
+        deskScale: isSmall ? 0.8 : isMobile ? 1 : isTablet ? 1.2 : 1.5,
+        deskPosition: isMobile ? [0.5, -4.5, 0] : isTablet ? [0.35, -4, 0] : [0.25, -3.5, 0],
         cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
         reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],
         ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-10, 10, 0] : isTablet ? [-12, 10, 0] : [-24, 10, 0],
@@ -142,36 +142,12 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
 };
 export const workExperiences = [
     {
-        id: 1,
-        name: 'CEA',
-        pos: 'R&D Software Engineer',
-        duration: 'March 2026 - August 2026',
-        title: "Developed a parametric curve modeling engine in Rust featuring state management and indexed geometry storage (FerriSpline). Built a Python API and created an interactive Python modeling environment (BOT).",
-        icon: `${baseUrl}assets/compagny/cea.svg`,
-    },
-    {
-        id: 2,
+        id: 6,
         name: 'KEPLER HR (WeCare@Work)',
         pos: 'Fullstack Developer',
-        duration: 'September 2025 - February 2026',
-        title: "Designed a monorepo architecture (Next.js, TypeScript, GraphQL, Prisma) to migrate a legacy PHP/MVC monolith toward a modular system. Implemented a reverse proxy to ensure service continuity between legacy and new modules.",
+        duration: 'July 2022 - December 2022',
+        title: "Developed a Bash script for automated file processing and carried out a comprehensive backend refactoring of the web application.",
         icon: `${baseUrl}assets/compagny/wecareatwork.png`,
-    },
-    {
-        id: 3,
-        name: 'Kepler HR (WeCare@Work)',
-        pos: 'Freelance Web Developer',
-        duration: '2024 - 2026',
-        title: "Content integration on the Alex platform (WeCare@Work).",
-        icon: `${baseUrl}assets/compagny/wecareatwork.png`,
-    },
-    {
-        id: 4,
-        name: 'Solteo',
-        pos: 'Freelance Web Developer',
-        duration: 'July 2024 - November 2024',
-        title: "Creation of a visualization tool for rooftop solar panels (in collaboration with other freelancers).",
-        icon: `${baseUrl}assets/compagny/solteo.svg`,
     },
     {
         id: 5,
@@ -182,12 +158,36 @@ export const workExperiences = [
         icon: `${baseUrl}assets/compagny/bpce.png`,
     },
     {
-        id: 6,
+        id: 4,
+        name: 'Solteo',
+        pos: 'Freelance Web Developer',
+        duration: 'July 2024 - November 2024',
+        title: "Creation of a visualization tool for rooftop solar panels (in collaboration with other freelancers).",
+        icon: `${baseUrl}assets/compagny/solteo.svg`,
+    },
+    {
+        id: 3,
+        name: 'Kepler HR (WeCare@Work)',
+        pos: 'Freelance Web Developer',
+        duration: '2024 - 2026',
+        title: "Content integration on the Alex platform (WeCare@Work).",
+        icon: `${baseUrl}assets/compagny/wecareatwork.png`,
+    },
+    {
+        id: 2,
         name: 'KEPLER HR (WeCare@Work)',
         pos: 'Fullstack Developer',
-        duration: 'July 2022 - December 2022',
-        title: "Developed a Bash script for automated file processing and carried out a comprehensive backend refactoring of the web application.",
+        duration: 'September 2025 - February 2026',
+        title: "Designed a monorepo architecture (Next.js, TypeScript, GraphQL, Prisma) to migrate a legacy PHP/MVC monolith toward a modular system. Implemented a reverse proxy to ensure service continuity between legacy and new modules.",
         icon: `${baseUrl}assets/compagny/wecareatwork.png`,
+    },
+    {
+        id: 1,
+        name: 'CEA',
+        pos: 'R&D Software Engineer',
+        duration: 'March 2026 - August 2026',
+        title: "Developed a parametric curve modeling engine in Rust featuring state management and indexed geometry storage (FerriSpline). Built a Python API and created an interactive Python modeling environment (BOT).",
+        icon: `${baseUrl}assets/compagny/cea.svg`,
     },
 ];
 

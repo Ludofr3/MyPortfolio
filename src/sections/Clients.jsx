@@ -1,7 +1,7 @@
 import { clientReviews } from "../constants"
 import { baseUrl } from '../config';
 
-const Clients = ({ client }) => {
+const Clients = () => {
   return (
     <section className="c-space my-20">
       <h3 className="head-text">Hear for My Clients</h3>
